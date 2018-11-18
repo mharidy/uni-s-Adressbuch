@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="terminplaner.PlanerViewController">
+   <children>
+      <HBox>
+         <children>
+            <Label fx:id="titel" text="Terminplaner">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <MenuBar fx:id="menuBar" layoutY="54.0" prefHeight="29.0" prefWidth="380.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Termine" />
+          <Menu mnemonicParsing="false" text="Kontake" />
+        </menus>
+      </MenuBar>
+      <HBox layoutY="111.0" prefHeight="27.0" prefWidth="380.0">
+         <children>
+            <Label text="Datum wählen" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="40.0" right="10.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <DatePicker fx:id="date" promptText="01.01.1970" />
+         </children>
+      </HBox>
+      <ListView fx:id="terminliste" layoutX="14.0" layoutY="156.0" prefHeight="306.0" prefWidth="353.0" />
+      <Button fx:id="addButton" layoutX="308.0" layoutY="472.0" mnemonicParsing="false" text="Neu" />
+   </children>
+</AnchorPane>
